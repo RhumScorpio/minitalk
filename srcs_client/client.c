@@ -6,13 +6,9 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:57:50 by clesaffr          #+#    #+#             */
-/*   Updated: 2021/11/17 21:38:22 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/12/09 21:55:37 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <signal.h>
 #include "../libft/libft.h"
 #define TIME 300
 
@@ -39,7 +35,10 @@ int	main(int argc, char **argv)
 	char	*str;
 
 	if (argc != 3)
+	{
+		ft_putstr("help : you forgot the PID and the message\n");
 		return (0);
+	}
 	str = argv[2];
 	pid = 0;
 	pid = atoi(argv[1]);

@@ -8,13 +8,17 @@ SRCS	=	server.c
 
 LIBFT	=	../libft/
 
+INCLUDES = -I $(LIBFT)
+
 all	:	$(NAME)
 
 $(NAME)	:	
 			$(CC) $(CFLAGS) $(SRCS) $(INCLUDES) -o $(NAME)
 			mv $(NAME) ..
-fclean	:	
+clean	:
 			rm -f ../$(NAME)
+fclean	:	clean
+
 re		:	fclean all
 
-.PHONY: fclean all re
+.PHONY: clean fclean all re

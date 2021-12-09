@@ -6,6 +6,8 @@ CFLAGS	=	-Wall -Werror -Wextra
 
 SRCS	=	client.c
 
+LIBRARY =	../libft/libft.a
+
 LIBFT	=	../libft/
 
 INCLUDES	=	-I $(LIBFT)
@@ -16,10 +18,12 @@ lib	:
 		make -C $(LIBFT)
 
 $(NAME)	:	
-			$(CC) $(CFLAGS) $(SRCS) $(INCLUDES) -o $(NAME)
+			$(CC) $(CFLAGS) $(SRCS) $(INCLUDES) -o $(NAME) $(LIBRARY)
 			mv $(NAME) ..
-fclean	:	
+clean	:	
 			rm -f ../$(NAME)
+fclean	:	clean
+
 re		:	fclean all
 
-.PHONY: fclean all re
+.PHONY: clean fclean all re

@@ -6,13 +6,10 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:32:24 by clesaffr          #+#    #+#             */
-/*   Updated: 2021/11/17 19:13:01 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/12/07 20:29:41 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <sys/types.h>
-#include <signal.h>
-#include <unistd.h>
+#include "../libft/libft.h"
 #define BUFF_SIZE 100
 
 void	signal_sawp(int n)
